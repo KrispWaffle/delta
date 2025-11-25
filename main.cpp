@@ -39,7 +39,6 @@ std::vector<std::string> parseCSVLine(const std::string &line, char delimiter = 
 }
 void readCSV(const std::string &filename)
 {
-    // 1. Open the file
     std::ifstream file(filename);
 
     if (!file.is_open())
@@ -215,7 +214,6 @@ int main(void)
     SetTargetFPS(60);
     Font customFont = LoadFont("/home/user1/Documents/fonts/ttf/JetBrainsMono-Regular.ttf");
     std::thread t(readCSV, "fake_btc_data.csv");
-    // --------------------------------------------------------------------------
     while (!WindowShouldClose())
     {
    
